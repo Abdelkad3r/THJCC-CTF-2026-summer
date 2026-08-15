@@ -19,6 +19,7 @@ they are available.
 | Reverse Engineering | [404](reverse/404/README.md) | 100 | hsuan0223x | `THJCC{vm_bytecode_is_a_contract}` |
 | Reverse Engineering | [Because There is no one Make Reverse So I Create This Chal](reverse/because-there-is-no-one-make-reverse-so-i-create-this-chal/README.md) | 100 | LemonTea | `THJCC{1_w0nd3r_h0w_l0n6_41_50lv35_17_>w<}` |
 | Reverse Engineering | [License](reverse/license/README.md) | 184 | hsuan0223x | `THJCC{license_pipeline_rebuilt}` |
+| Reverse Engineering | [TeaGod.exe](reverse/teagod/README.md) | 100 | PGpenguin72 | `THJCC{h77p5://p4s73b1n.com/R58uv133}` |
 | Reverse Engineering | [xorlocks](reverse/xorlocks/README.md) | 100 | hsuan0223x | `THJCC{xor_basics_are_not_magic}` |
 
 ## Repository Layout
