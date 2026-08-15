@@ -14,6 +14,7 @@ they are available.
 | Forensics | [Afterimage1](forensics/afterimage1/README.md) | 122 | Not specified | `THJCC{v1d3o_F0ren51cS_qkrejnga}` |
 | Forensics | [Afterimage2](forensics/afterimage2/README.md) | 292 | denny | `THJCC{hid_k3y5tr0k3_l34k}` |
 | Forensics | [Man!](forensics/man/README.md) | 100 | denny | `THJCC{Man_BA_0ut_Seeyouaga1n_1978}` |
+| Misc | [A Little Penguin's Starry Sky Observation](misc/starry-sky-observation/README.md) | 100 | PGpenguin72 | `THJCC{ori=RA5h,Dec+5°}` |
 | Reverse Engineering | [404](reverse/404/README.md) | 100 | hsuan0223x | `THJCC{vm_bytecode_is_a_contract}` |
 | Reverse Engineering | [Because There is no one Make Reverse So I Create This Chal](reverse/because-there-is-no-one-make-reverse-so-i-create-this-chal/README.md) | 100 | LemonTea | `THJCC{1_w0nd3r_h0w_l0n6_41_50lv35_17_>w<}` |
 | Reverse Engineering | [xorlocks](reverse/xorlocks/README.md) | 100 | hsuan0223x | `THJCC{xor_basics_are_not_magic}` |
