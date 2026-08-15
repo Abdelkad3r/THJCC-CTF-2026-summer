@@ -18,6 +18,7 @@ they are available.
 | Forensics | [Man!](forensics/man/README.md) | 100 | denny | `THJCC{Man_BA_0ut_Seeyouaga1n_1978}` |
 | Misc | [NoNo](misc/nono/README.md) | 100 | UmmIt Kin | `THJCC{f0ll0w_th3_str34m_2_th3_h1dd3n_r3p0rt}` |
 | Misc | [A Little Penguin's Starry Sky Observation](misc/starry-sky-observation/README.md) | 100 | PGpenguin72 | `THJCC{ori=RA5h,Dec+5°}` |
+| Misc | [Where is our head of challenges?](misc/where-is-our-head-of-challenges/README.md) | 100 | PGpenguin72 | `THJCC{144.95,-37.81}` |
 | Reverse Engineering | [404](reverse/404/README.md) | 100 | hsuan0223x | `THJCC{vm_bytecode_is_a_contract}` |
 | Reverse Engineering | [Because There is no one Make Reverse So I Create This Chal](reverse/because-there-is-no-one-make-reverse-so-i-create-this-chal/README.md) | 100 | LemonTea | `THJCC{1_w0nd3r_h0w_l0n6_41_50lv35_17_>w<}` |
 | Reverse Engineering | [License](reverse/license/README.md) | 184 | hsuan0223x | `THJCC{license_pipeline_rebuilt}` |
