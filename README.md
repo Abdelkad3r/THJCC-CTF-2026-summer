@@ -9,6 +9,7 @@ they are available.
 | Category | Challenge | Points | Author | Flag |
 | --- | --- | ---: | --- | --- |
 | Cryptography | [Lattice of Doom](crypto/lattice-of-doom/README.md) | 100 | 燒餅不加蛋 | `THJCC{l4tt1c3s_turn_b14s3d_n0nc3s_1nt0_pr1v4t3_k3ys}` |
+| Cryptography | [Nonce Sense](crypto/nonce-sense/README.md) | 100 | 燒餅不加蛋 | `THJCC{n3v3r_3v3r_r3us3_th3_s4m3_n0nc3}` |
 | Cryptography | [Oracle of Padding](crypto/oracle-of-padding/README.md) | 100 | 燒餅不加蛋 | `THJCC{p4dd1ng_0r4cl3s_l34k_0n3_byt3_p3r_qu3ry}` |
 | Cryptography | [お昼はサイゼリヤに行こうニャ！](crypto/saizeriya/README.md) | 100 | MaZon | `THJCC{46Z-WQv_vFc}` |
 | Forensics | [Afterimage1](forensics/afterimage1/README.md) | 122 | Not specified | `THJCC{v1d3o_F0ren51cS_qkrejnga}` |
