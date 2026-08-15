@@ -9,6 +9,7 @@ they are available.
 | Category | Challenge | Points | Author | Flag |
 | --- | --- | ---: | --- | --- |
 | Binary Exploitation | [Canary Notes](pwn/canary-notes/README.md) | 100 | 櫛風 | `THJCC{y0u_k1ll3d_c4n4ry_y0u_b4d_b4d}` |
+| Binary Exploitation | [Chronicle](pwn/chronicle/README.md) | 223 | 夜有夢 | `THJCC{D0_y0u_KN0W_7h15_15_@_PWN_ch@ll3nge_WH17CH_m4d3_BY_@1???}` |
 | Binary Exploitation | [deja vu](pwn/deja-vu/README.md) | 100 | xzhiyouu | `THJCC{s0_wh1ch_AI_d1d_y0u_us3_t0_s0lv3_th1s???}` |
 | Binary Exploitation | [I ate something bad ...](pwn/i-ate-something-bad/README.md) | 100 | 櫛風 | `THJCC{m4yb3_1_34t_t0_much}` |
 | Binary Exploitation | [necropet](pwn/necropet/README.md) | 100 | EH | `THJCC{Tell_me,_Linguini,_about_your_interests...D0_u_1ik3_anima1s?The_u5ua1,_d0gs,_cats,_h0r535,_guinea_pigs...RATS~~}` |
