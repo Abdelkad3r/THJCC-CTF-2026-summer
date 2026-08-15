@@ -1,0 +1,12 @@
+Endpoint: chal.thjcc.org:12000
+
+TOKEN 5a31c94bba8d65e280db4cb97a244e5eb643371fd6b92be716f22fbd82547418cbaaefdb41d7052fd0fa4579445e33d89edc54535bfc46e5dcb8c3eee143f830814d417fd95119d2f71ba1b1e630ff9c349a3908ab3c2bfbb7d2cdb0d37de93faab409da58a38eff836a1c867d643d39
+
+Submitting the unchanged token:
+OK
+
+Submitting malformed hexadecimal "00":
+BAD
+
+Note: The service generates a fresh token for each connection, so the value
+shown above is a protocol sample rather than a fixed challenge ciphertext.
