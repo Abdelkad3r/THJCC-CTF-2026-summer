@@ -39,6 +39,7 @@ they are available.
 | Reverse Engineering | [License](reverse/license/README.md) | 184 | hsuan0223x | `THJCC{license_pipeline_rebuilt}` |
 | Reverse Engineering | [TeaGod.exe](reverse/teagod/README.md) | 100 | PGpenguin72 | `THJCC{h77p5://p4s73b1n.com/R58uv133}` |
 | Reverse Engineering | [xorlocks](reverse/xorlocks/README.md) | 100 | hsuan0223x | `THJCC{xor_basics_are_not_magic}` |
+| Web | [Bookworm](web/bookworm/README.md) | 351 | denny | `THJCC{s3c0nd_0rd3r_b00kw0rm_9f3a1c}` |
 | Web | [Contoso Asset Portal](web/contoso-asset-portal/README.md) | 100 | denny | `THJCC{f0rg3d_v13wst4t3_w1th_l34k3d_m4ch1n3k3y}` |
 | Web | [get-file1](web/get-file1/README.md) | 100 | 夜有夢 | `THJCC{pHp_StReAm_30X_cAsE_43082ed528}` |
 | Web | [get-file2](web/get-file2/README.md) | 308 | 夜有夢 | `THJCC{PHP_stream_30x_DuAl_65de4980cf}` |
