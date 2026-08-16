@@ -13,6 +13,7 @@ they are available.
 | Binary Exploitation | [deja vu](pwn/deja-vu/README.md) | 100 | xzhiyouu | `THJCC{s0_wh1ch_AI_d1d_y0u_us3_t0_s0lv3_th1s???}` |
 | Binary Exploitation | [I ate something bad ...](pwn/i-ate-something-bad/README.md) | 100 | 櫛風 | `THJCC{m4yb3_1_34t_t0_much}` |
 | Binary Exploitation | [necropet](pwn/necropet/README.md) | 100 | EH | `THJCC{Tell_me,_Linguini,_about_your_interests...D0_u_1ik3_anima1s?The_u5ua1,_d0gs,_cats,_h0r535,_guinea_pigs...RATS~~}` |
+| Binary Exploitation | [Very Security Shell](pwn/very-security-shell/README.md) | 463 | 櫛風 | `THJCC{strnc0mp_1s_n0t_s3cur3}` |
 | Cryptography | [BlackFrost](crypto/blackfrost/README.md) | 498 | hsuan0223x | `THJCC{blackfrost_config_recovered}` |
 | Cryptography | [Forbidden](crypto/forbidden/README.md) | 248 | 燒餅不加蛋 | `THJCC{h_r3c0v3r3d_gcm_1s_f0rb1dd3n_w1th0ut_fr3sh_n0nc3s}` |
 | Cryptography | [Lattice of Doom](crypto/lattice-of-doom/README.md) | 100 | 燒餅不加蛋 | `THJCC{l4tt1c3s_turn_b14s3d_n0nc3s_1nt0_pr1v4t3_k3ys}` |
