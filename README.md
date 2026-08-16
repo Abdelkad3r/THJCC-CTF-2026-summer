@@ -40,6 +40,7 @@ they are available.
 | Reverse Engineering | [xorlocks](reverse/xorlocks/README.md) | 100 | hsuan0223x | `THJCC{xor_basics_are_not_magic}` |
 | Web | [Contoso Asset Portal](web/contoso-asset-portal/README.md) | 100 | denny | `THJCC{f0rg3d_v13wst4t3_w1th_l34k3d_m4ch1n3k3y}` |
 | Web | [get-file1](web/get-file1/README.md) | 100 | 夜有夢 | `THJCC{pHp_StReAm_30X_cAsE_43082ed528}` |
+| Web | [get-file2](web/get-file2/README.md) | 308 | 夜有夢 | `THJCC{PHP_stream_30x_DuAl_65de4980cf}` |
 
 ## Repository Layout
 
