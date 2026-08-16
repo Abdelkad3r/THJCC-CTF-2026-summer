@@ -1,0 +1,20 @@
+services:
+ w:
+  build: .
+  ports: ["8081:80"]
+  networks:
+    - public
+    - n
+ r:
+  build: ./redirector
+  networks: [n]
+ f:
+  build: ./flag
+  networks:
+   n:
+    aliases: [flag.thjcc]
+networks:
+ public:
+
+ n:
+  internal: true

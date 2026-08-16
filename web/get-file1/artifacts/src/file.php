@@ -1,0 +1,4 @@
+<?php
+function a($s){$p=parse_url($s);return $p&&isset($p['scheme'],$p['host'])&&in_array(strtolower($p['scheme']),['http','https'],true)&&strtolower(rtrim($p['host'],'.'))!=='flag.thjcc';}
+function b($s){for($i=0;$i<5;$i++){if(!a($s))throw new Exception();$c=stream_context_create(['http'=>['follow_location'=>false,'timeout'=>3,'ignore_errors'=>true]]);$x=@file_get_contents($s,false,$c);$h=$http_response_header??[];$n=null;foreach($h as $v)if(str_starts_with($v,'Location:'))$n=trim(substr($v,strpos($v,':')+1));if($n!==null){if(!a($n))throw new Exception();$s=$n;continue;}if($x===false)throw new Exception();$d=stream_context_create(['http'=>['follow_location'=>true,'timeout'=>3,'ignore_errors'=>true]]);$y=@file_get_contents($s,false,$d);if($y===false)throw new Exception();return $y;}throw new Exception();}
+header('Content-Type: text/plain');try{echo b($_GET['u']??'');}catch(Throwable $e){http_response_code(400);echo 'error';}
