@@ -20,6 +20,7 @@ they are available.
 | Cryptography | [Nonce Sense](crypto/nonce-sense/README.md) | 100 | 燒餅不加蛋 | `THJCC{n3v3r_3v3r_r3us3_th3_s4m3_n0nc3}` |
 | Cryptography | [Oracle of Padding](crypto/oracle-of-padding/README.md) | 100 | 燒餅不加蛋 | `THJCC{p4dd1ng_0r4cl3s_l34k_0n3_byt3_p3r_qu3ry}` |
 | Cryptography | [Schizophrenic Signer](crypto/schizophrenic-signer/README.md) | 223 | Not specified | `THJCC{w0w_y0u_f0und_th3_h1dd3n_d3lt4_b3tw33n_p_4nd_q!}` |
+| Cryptography | [Two Exponents](crypto/two-exponents/README.md) | 421 | 燒餅不加蛋 | `THJCC{n0t_c0pr1m3_but_st1ll_br0k3n_4nyw4y}` |
 | Cryptography | [お昼はサイゼリヤに行こうニャ！](crypto/saizeriya/README.md) | 100 | MaZon | `THJCC{46Z-WQv_vFc}` |
 | Forensics | [Afterimage1](forensics/afterimage1/README.md) | 122 | Not specified | `THJCC{v1d3o_F0ren51cS_qkrejnga}` |
 | Forensics | [Afterimage2](forensics/afterimage2/README.md) | 292 | denny | `THJCC{hid_k3y5tr0k3_l34k}` |
