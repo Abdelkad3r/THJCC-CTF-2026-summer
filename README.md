@@ -44,6 +44,7 @@ they are available.
 | Web | [Contoso Asset Portal](web/contoso-asset-portal/README.md) | 100 | denny | `THJCC{f0rg3d_v13wst4t3_w1th_l34k3d_m4ch1n3k3y}` |
 | Web | [get-file1](web/get-file1/README.md) | 100 | 夜有夢 | `THJCC{pHp_StReAm_30X_cAsE_43082ed528}` |
 | Web | [get-file2](web/get-file2/README.md) | 308 | 夜有夢 | `THJCC{PHP_stream_30x_DuAl_65de4980cf}` |
+| Web | [SimpleNotes](web/simple-notes/README.md) | 433 | xzhiyouu | `THJCC{inspired_by_blackhat_asia_2026}` |
 | Web | [Who is Whois? 2](web/who-is-whois-2/README.md) | 337 | Not specified | `THJCC{Wh0_15_wH015???WH0_15_wh0_15:D}` |
 
 ## Repository Layout

