@@ -33,6 +33,7 @@ they are available.
 | Misc | [NoNo](misc/nono/README.md) | 100 | UmmIt Kin | `THJCC{f0ll0w_th3_str34m_2_th3_h1dd3n_r3p0rt}` |
 | Misc | [SO EZ MISC](misc/so-ez-misc/README.md) | 493 | xzhiyouu | `THJCC{CVE_2025_24359_th3_p4tch_w4s_1nc0mpl3t3:/}` |
 | Misc | [A Little Penguin's Starry Sky Observation](misc/starry-sky-observation/README.md) | 100 | PGpenguin72 | `THJCC{ori=RA5h,Dec+5°}` |
+| Misc | [TeaGod666](misc/teagod666/README.md) | 100 | PGpenguin72 | `THJCC{t3ag0d666_h77p5://y0u7u.b3/Dji_wUhFPvo?si=z1B9a-4nShzop-du&t=1577}` |
 | Misc | [Time Machine](misc/time-machine/README.md) | 475 | xzhiyouu | `THJCC{th3_v3r1f13r_ch3ck3d_th3_n4m3_but_n0t_th3_l1nkn4m3}` |
 | Misc | [Where is our head of challenges?](misc/where-is-our-head-of-challenges/README.md) | 100 | PGpenguin72 | `THJCC{144.95,-37.81}` |
 | Reverse Engineering | [404](reverse/404/README.md) | 100 | hsuan0223x | `THJCC{vm_bytecode_is_a_contract}` |

