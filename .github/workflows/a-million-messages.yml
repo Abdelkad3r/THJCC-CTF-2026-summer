@@ -1,0 +1,16 @@
+name: A Million Messages solver
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - codax/a-million-messages-run
+
+jobs:
+  solve:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run padding-oracle exploit
+        run: python3 -u crypto/a-million-messages/solve.py
