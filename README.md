@@ -14,6 +14,7 @@ they are available.
 | Binary Exploitation | [I ate something bad ...](pwn/i-ate-something-bad/README.md) | 100 | 櫛風 | `THJCC{m4yb3_1_34t_t0_much}` |
 | Binary Exploitation | [necropet](pwn/necropet/README.md) | 100 | EH | `THJCC{Tell_me,_Linguini,_about_your_interests...D0_u_1ik3_anima1s?The_u5ua1,_d0gs,_cats,_h0r535,_guinea_pigs...RATS~~}` |
 | Cryptography | [BlackFrost](crypto/blackfrost/README.md) | 498 | hsuan0223x | `THJCC{blackfrost_config_recovered}` |
+| Cryptography | [Forbidden](crypto/forbidden/README.md) | 248 | 燒餅不加蛋 | `THJCC{h_r3c0v3r3d_gcm_1s_f0rb1dd3n_w1th0ut_fr3sh_n0nc3s}` |
 | Cryptography | [Lattice of Doom](crypto/lattice-of-doom/README.md) | 100 | 燒餅不加蛋 | `THJCC{l4tt1c3s_turn_b14s3d_n0nc3s_1nt0_pr1v4t3_k3ys}` |
 | Cryptography | [Nonce Sense](crypto/nonce-sense/README.md) | 100 | 燒餅不加蛋 | `THJCC{n3v3r_3v3r_r3us3_th3_s4m3_n0nc3}` |
 | Cryptography | [Oracle of Padding](crypto/oracle-of-padding/README.md) | 100 | 燒餅不加蛋 | `THJCC{p4dd1ng_0r4cl3s_l34k_0n3_byt3_p3r_qu3ry}` |
