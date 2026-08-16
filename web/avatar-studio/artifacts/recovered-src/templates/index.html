@@ -1,0 +1,37 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Avatar Studio</title>
+<style>
+  body { font: 15px/1.6 system-ui, sans-serif; max-width: 640px; margin: 4rem auto; padding: 0 1rem; }
+  h1 { font-weight: 600; }
+  form { margin: 1.5rem 0; }
+  input[type=text] { padding: .4rem; }
+  button { padding: .4rem .9rem; }
+  code { background: #f3f3f3; padding: .1rem .3rem; }
+  img.avatar { max-height: 96px; border: 1px solid #ddd; }
+</style>
+
+<h1>Avatar Studio</h1>
+<p>Pick a name, upload an avatar. Members only. Admins get more.</p>
+
+{% if user %}
+  <p>Signed in as <b>{{ user.username }}</b> (role: <code>{{ user.role }}</code>)</p>
+
+  <form action="/upload" method="post" enctype="multipart/form-data">
+    <label>Avatar image: <input type="file" name="avatar"></label>
+    <button>Upload</button>
+  </form>
+
+  {% if request.cookies.get('avatar') %}
+    <p>Your avatar:</p>
+    <img class="avatar" src="/uploads/{{ request.cookies.get('avatar') }}">
+  {% endif %}
+{% else %}
+  <form action="/register" method="post">
+    <label>Name: <input type="text" name="username"></label>
+    <button>Enter</button>
+  </form>
+{% endif %}
+
+<hr>
+<p style="color:#999">Avatar Studio</p>

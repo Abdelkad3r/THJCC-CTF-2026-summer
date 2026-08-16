@@ -1,0 +1,5 @@
+uploads/*
+!uploads/.keep
+keys/*
+__pycache__/
+*.pyc
