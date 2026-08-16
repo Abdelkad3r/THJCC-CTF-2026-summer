@@ -5,11 +5,13 @@ from __future__ import annotations
 
 import socket
 import time
+from dataclasses import dataclass
 
 
 HOST = "chal.thjcc.org"
 PORT = 12003
 BATCH_SIZE = 512
+SPECULATIVE_DEPTH = 8
 
 
 def ceil_div(a: int, b: int) -> int:
@@ -90,6 +92,98 @@ def narrow(
     return merged
 
 
+@dataclass(frozen=True)
+class Cursor:
+    mode: str
+    first: int
+    second: int = 0
+
+
+@dataclass(frozen=True)
+class AttackState:
+    intervals: tuple[tuple[int, int], ...]
+    cursor: Cursor
+    rounds: int
+
+
+def make_cursor(
+    intervals: tuple[tuple[int, int], ...],
+    previous_s: int,
+    n: int,
+    boundary: int,
+) -> Cursor:
+    if len(intervals) > 1:
+        return Cursor("linear", previous_s + 1)
+
+    low, high = intervals[0]
+    r = ceil_div(2 * (high * previous_s - 2 * boundary), n)
+    return Cursor("single", r)
+
+
+def reject_next(
+    state: AttackState, n: int, boundary: int
+) -> tuple[int, AttackState]:
+    """Return the next multiplier and the state reached if it is rejected."""
+    if state.cursor.mode == "linear":
+        candidate = state.cursor.first
+        rejected = AttackState(
+            state.intervals, Cursor("linear", candidate + 1), state.rounds
+        )
+        return candidate, rejected
+
+    low, high = state.intervals[0]
+    r = state.cursor.first
+    next_s = state.cursor.second
+    while True:
+        s_low = ceil_div(2 * boundary + r * n, high)
+        s_high = (3 * boundary - 1 + r * n) // low
+        candidate = max(s_low, next_s) if next_s else s_low
+        if candidate <= s_high:
+            if candidate < s_high:
+                cursor = Cursor("single", r, candidate + 1)
+            else:
+                cursor = Cursor("single", r + 1)
+            rejected = AttackState(state.intervals, cursor, state.rounds)
+            return candidate, rejected
+        r += 1
+        next_s = 0
+
+
+def accept(
+    state: AttackState, candidate: int, n: int, boundary: int
+) -> AttackState | None:
+    intervals = tuple(narrow(list(state.intervals), candidate, n, boundary))
+    if not intervals:
+        return None
+    return AttackState(
+        intervals,
+        make_cursor(intervals, candidate, n, boundary),
+        state.rounds + 1,
+    )
+
+
+def collect_speculative_queries(
+    state: AttackState,
+    depth: int,
+    n: int,
+    boundary: int,
+    candidates: set[int],
+) -> None:
+    if depth == 0 or (
+        len(state.intervals) == 1
+        and state.intervals[0][0] == state.intervals[0][1]
+    ):
+        return
+
+    candidate, rejected = reject_next(state, n, boundary)
+    candidates.add(candidate)
+    collect_speculative_queries(rejected, depth - 1, n, boundary, candidates)
+
+    accepted = accept(state, candidate, n, boundary)
+    if accepted is not None:
+        collect_speculative_queries(accepted, depth - 1, n, boundary, candidates)
+
+
 def recover(oracle: Oracle) -> int:
     n = oracle.n
     block_size = (n.bit_length() + 7) // 8
@@ -100,51 +194,52 @@ def recover(oracle: Oracle) -> int:
     # is necessary. Search for the first useful multiplier in batched queries.
     s = oracle.first_valid_from(ceil_div(n, 3 * boundary))
     print(f"[+] Initial conforming multiplier: {s}", flush=True)
+    intervals = narrow(intervals, s, n, boundary)
+    if not intervals:
+        raise RuntimeError("first oracle response eliminated every interval")
+    state = AttackState(
+        tuple(intervals),
+        make_cursor(tuple(intervals), s, n, boundary),
+        1,
+    )
 
-    iteration = 1
-    while True:
-        intervals = narrow(intervals, s, n, boundary)
-        if not intervals:
-            raise RuntimeError("oracle responses eliminated every interval")
+    reported_round = 0
+    while not (
+        len(state.intervals) == 1
+        and state.intervals[0][0] == state.intervals[0][1]
+    ):
+        candidates: set[int] = set()
+        collect_speculative_queries(
+            state, SPECULATIVE_DEPTH, n, boundary, candidates
+        )
+        ordered = sorted(candidates)
+        answers = dict(zip(ordered, oracle.test_many(ordered)))
 
-        if iteration % 25 == 0:
-            width = sum(high - low + 1 for low, high in intervals)
+        for _ in range(SPECULATIVE_DEPTH):
+            if (
+                len(state.intervals) == 1
+                and state.intervals[0][0] == state.intervals[0][1]
+            ):
+                break
+            candidate, rejected = reject_next(state, n, boundary)
+            if answers[candidate]:
+                accepted = accept(state, candidate, n, boundary)
+                if accepted is None:
+                    raise RuntimeError("conforming response produced no interval")
+                state = accepted
+            else:
+                state = rejected
+
+        if state.rounds // 25 > reported_round // 25:
+            width = sum(high - low + 1 for low, high in state.intervals)
             print(
-                f"[.] round={iteration} intervals={len(intervals)} "
+                f"[.] round={state.rounds} intervals={len(state.intervals)} "
                 f"width_bits={width.bit_length()} queries={oracle.queries:,}",
                 flush=True,
             )
+        reported_round = state.rounds
 
-        if len(intervals) == 1 and intervals[0][0] == intervals[0][1]:
-            return intervals[0][0]
-
-        if len(intervals) > 1:
-            s = oracle.first_valid_from(s + 1)
-        else:
-            low, high = intervals[0]
-            r = ceil_div(2 * (high * s - 2 * boundary), n)
-
-            while True:
-                s_low = ceil_div(2 * boundary + r * n, high)
-                s_high = (3 * boundary - 1 + r * n) // low
-                if s_low <= s_high:
-                    candidates = list(range(s_low, s_high + 1))
-                    for offset in range(0, len(candidates), BATCH_SIZE):
-                        batch = candidates[offset : offset + BATCH_SIZE]
-                        results = oracle.test_many(batch)
-                        match = next(
-                            (x for x, valid in zip(batch, results) if valid), None
-                        )
-                        if match is not None:
-                            s = match
-                            break
-                    else:
-                        r += 1
-                        continue
-                    break
-                r += 1
-
-        iteration += 1
+    return state.intervals[0][0]
 
 
 def unpad(block: bytes) -> bytes:
