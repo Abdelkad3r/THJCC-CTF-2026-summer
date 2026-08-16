@@ -1,0 +1,8 @@
+asset_id,name,owner,classification
+AST-0010001,Reception Laptop,facilities,public
+AST-0010042,Finance Printer,finance,internal
+AST-0010337,Sales Workstation,sales,internal
+AST-0019921,Meeting Room Display,facilities,public
+AST-4F2A9C0,Domain Controller,it-admin,restricted
+AST-0022014,Backup NAS,it-ops,internal
+AST-0027788,Guest WiFi AP,facilities,public

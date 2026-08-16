@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<!-- BACKUP before the migration. TODO: delete before go-live (not done).
+     NOTE: keys were NOT rotated, so this old backup still leaks the
+     CURRENT production validationKey. -->
+<configuration><system.web>
+  <machineKey validationKey="F3690E7A9D8F4C2B1A5E6D7C8B9A0F1E2D3C4B5A69788796A5B4C3D2E1F0A9B8C7D6E5F4A3B2C1D0E9F8A7B6C5D4E3F2A1B0C9D8E7F6A5B4C3D2E1F0A9B8"
+    decryptionKey="8C7D6E5F4A3B2C1D0E9F8A7B6C5D4E3F2A1B0C9D8E7F6A5B"
+    validation="SHA1" decryption="AES" />
+</system.web></configuration>

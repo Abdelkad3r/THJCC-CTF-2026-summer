@@ -37,6 +37,7 @@ they are available.
 | Reverse Engineering | [License](reverse/license/README.md) | 184 | hsuan0223x | `THJCC{license_pipeline_rebuilt}` |
 | Reverse Engineering | [TeaGod.exe](reverse/teagod/README.md) | 100 | PGpenguin72 | `THJCC{h77p5://p4s73b1n.com/R58uv133}` |
 | Reverse Engineering | [xorlocks](reverse/xorlocks/README.md) | 100 | hsuan0223x | `THJCC{xor_basics_are_not_magic}` |
+| Web | [Contoso Asset Portal](web/contoso-asset-portal/README.md) | 100 | denny | `THJCC{f0rg3d_v13wst4t3_w1th_l34k3d_m4ch1n3k3y}` |
 
 ## Repository Layout
 
