@@ -26,6 +26,7 @@ they are available.
 | Forensics | [Afterimage2](forensics/afterimage2/README.md) | 292 | denny | `THJCC{hid_k3y5tr0k3_l34k}` |
 | Forensics | [Man!](forensics/man/README.md) | 100 | denny | `THJCC{Man_BA_0ut_Seeyouaga1n_1978}` |
 | Forensics | [Starry Sky](forensics/starry-sky/README.md) | 499 | denny | `THJCC{c0unt1ng_blu3s_by_thr33s}` |
+| Misc | [67jail](misc/67jail/README.md) | 100 | xzhiyouu | `THJCC{676767676767676767676767676767676767676767676767}` |
 | Misc | [All night long...](misc/all-night-long/README.md) | 337 | MaZon | `THJCC{δράκος}` |
 | Misc | [Baritone](misc/baritone/README.md) | 470 | Not specified | `THJCC{DoYouHavePerfectPitch}` |
 | Misc | [CTFxck](misc/ctfxck/README.md) | 485 | xzhiyouu | `THJCC{h4lt1ng_1s_4_c0ntr0l_fl0w_pr1m1t1v3}` |

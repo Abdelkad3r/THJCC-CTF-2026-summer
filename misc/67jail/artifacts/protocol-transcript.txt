@@ -1,0 +1,25 @@
+Connection: nc chal.thjcc.org 9000
+
+Authenticate with your CTFd API token.
+token: [REDACTED]
+Hello, Abdelkader!
+
+Q: Who are you?
+[1] OpenAI Codex
+[2] Claude Code
+[3] Human
+your chosen(please enter number): 3
+
+Please enter 692506 to confirm that you are human.
+nonce: 692506
+Correct!!!
+
+Welcome to THJCC Summer Edition~
+Here is the challenge
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+>> [6767-character Unicode payload]
+THJCC{676767676767676767676767676767676767676767676767}
+
+The nonce changes on every connection. solve.py extracts and returns it
+automatically. No CTFd API token is stored in this artifact or in the solver.
